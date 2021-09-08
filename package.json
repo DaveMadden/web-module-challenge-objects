@@ -1,10 +1,12 @@
 {
-  "name": "codegraded-project-js",
+  "name": "codegraded-project",
   "version": "0.0.3",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-   "test": "jest --watchAll --verbose --forceExit --silent"
+    "test": "jest --watchAll --verbose --forceExit --silent",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -15,8 +17,27 @@
     "@babel/plugin-transform-runtime": "7.14.5",
     "@babel/preset-env": "7.14.5",
     "@types/jest": "26.0.23",
-    "eslint": "7.29.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-wesbos": "^1.0.1",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "26.6.3",
-    "nodemon": "2.0.7"
-  }
+    "nodemon": "2.0.7",
+    "prettier": "^2.3.2"
+  },
+  "description": "## Objects",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/codegraded-project-js/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/codegraded-project-js#readme",
+  "dependencies": {},
+  "author": "",
+  "license": "ISC"
 }
