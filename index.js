@@ -78,7 +78,13 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+function feedByName(str) {
+  for (let i =0; i < reviews.length; i++){
+    if (reviews[i].name === str){
+      console.log(reviews[i].feedback);
+    }
+  }
+}
 
 
 
