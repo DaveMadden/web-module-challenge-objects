@@ -78,6 +78,8 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+feedByName(`Julius`);
+
 function feedByName(str) {
   for (let i =0; i < reviews.length; i++){
     if (reviews[i].name === str){
@@ -94,7 +96,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
-console.log(reviews);
+console.log(reviews[7]);
 
 
 
@@ -105,11 +107,23 @@ Write a function that creates an object with name, rating, feedback, add the new
   1. Receive an array
   2. Receive the following object keys name, rating, feedback
   3. The function should push the following object to the array: {name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }
+                                                                          THIS SHIT IS WRONG ^^^^^^^^
   4. should return the resulting array
 */
+addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!')
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(arr, name, rating, feedback){
+  let rev = {
+    name: name,
+    rating: rating, 
+    feedback: feedback,
+  }
+
+  //let text = `{name: "${name}", rating: ${rating}, review: "${feedback}"}`;
+  // console.log(text);
+  
+  arr.push(rev);
+  return arr;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -123,11 +137,9 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, num) {
+  return `${arr[num].name} gave the restaurant a ${arr[num].rating} star review, and their feedback was: ${arr[num].feedback}`;
 }
-
-
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -137,13 +149,11 @@ Use the getLastReview function below to do the following:
   1. Receive an array of objects as a parameter
   2. Return the last index as a string in the format: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
   3. Invoke the function with the reviews array as the argument
-  
+  // ^^^^testing doesn't want this, it wants to pass the reviews array itself
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
-
-
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arr) {
+  return getReviewByIndex(arr, arr.length-1);
 } 
 
 
